@@ -1,25 +1,17 @@
-#ifndef SUDOKU_SOLVER_H
-#define SUDOKU_SOLVER_H
+#ifndef SUDOKU_GAME_H
+#define SUDOKU_GAME_H
 
-class SudokuSolver {
+class SudokuGame {
 public:
-    // Constructor to initialize the Sudoku board
-    SudokuSolver(int board[9][9]);
-
-    // Function to solve the Sudoku puzzle
-    bool solve();
-
-    // Function to print the Sudoku board
-    void printBoard();
+    SudokuGame(int difficulty);
+    void displayBoard();
+    bool makeMove(int row, int col, int num);
+    bool isGameWon();
 
 private:
     int board[9][9];
-
-    // Helper function to check if a number can be placed at (row, col)
-    bool isValid(int row, int col, int num);
-
-    // Backtracking function to solve the Sudoku
-    bool solveUtil();
+    void generatePuzzle(int difficulty);
+    bool isValidMove(int row, int col, int num);
 };
 
-#endif // SUDOKU_SOLVER_H
+#endif // SUDOKU_GAME_H
