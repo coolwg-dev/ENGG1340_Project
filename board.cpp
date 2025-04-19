@@ -3,22 +3,22 @@
 
 Board::Board() {
     srand(static_cast<unsigned int>(time(0)));
-    // Initialize the board with zeros
-    for (int i = 0; i < 9; ++i) {
-        for (int j = 0; j < 9; ++j) {
-            board[i][j] = 0;
-        }
-    }
-    int no = 0;
-    no = rand()%75;
-    for(int i=0;i<no;++i){
-        for(int row=rand()%9;row>-1;row=rand()%9){
-            for(int col=rand()%9;col>-1;col=rand()%9){
+    for(int row=0;row<9;++row){
+        for(int col=0;col<9;++col){
+            while(board[row][col]==0){
                 int in=rand()%9+1;
                 if(isValid(row,col,in)){
                     board[row][col]=in;
                 }
             }
+        }
+    }
+    // Initialize the board with zeros
+    int no = 0;
+    no = rand()%75;
+    for (int i = 0; i < 9; ++i) {
+        for (int j = 0; j < 9; ++j) {
+            board[i][j] = 0;
         }
     }
 }
