@@ -18,7 +18,18 @@ void Board::display() {
         std::cout << std::endl;
     }
 }
-
+bool Board::isGameWon(){
+    for (int row=0;row<9;++row){
+        for(int col=0;col<9;++col){
+            if(board[row][col]==0){
+                return false;            
+            }
+            if(!isValid(row,col,board[row][col])){
+                return false;
+            }
+        }
+    }
+}
 bool Board::setCell(int row, int col, int num) {
     if (isValid(row, col, num)) {
         board[row][col] = num;
