@@ -12,8 +12,8 @@ Board::Board() {
     no = srand(time(0))%75;
     for(int i=0;i<no;++i){
         for(int row=srand(time(0))%9;row>0;row=srand(time(0))%9){
-            for(int col=rand()%9;col>0;col=rand()%9){
-                int in=rand()%9+1;
+            for(int col=srand(time(0))%9;col>0;col=srand(time(0))){
+                int in=srand(time(0))%9+1;
                 if(isValid(row,col,in)){
                     board[row][col]=in;
                 }
