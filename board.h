@@ -8,6 +8,7 @@ public:
     bool setCell(int row, int col, int num); // Set a number in a cell
     int getCell(int row, int col);    // Get the number from a cell
     bool isValid(int row, int col, int num); // Check if placing num is valid
+    bool isGameWon();
 
 private:
     int board[9][9];                  // 2D array for the Sudoku board
