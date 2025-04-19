@@ -11,8 +11,8 @@ Board::Board() {
     int no = 0;
     no = rand()%75;
     for(int i=0;i<no;++i){
-        for(int row=rand();row>0;row=rand()){
-            for(int col=rand();col>0;col=rand()){
+        for(int row=rand()%9;row>0;row=rand()%9){
+            for(int col=rand()%9;col>0;col=rand()%9){
                 int in=rand()%9+1;
                 if(isValid(row,col,board[row][col])){
                     board[row][col]=in;
