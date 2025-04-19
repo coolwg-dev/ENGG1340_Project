@@ -11,7 +11,7 @@ SRCS = main.cpp board.cpp sudoku_game.cpp
 OBJS = $(SRCS:.cpp=.o)
 
 # Executable name
-TARGET = sudoku_game
+TARGET = sudoku
 
 # Default target
 all: $(TARGET)
