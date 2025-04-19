@@ -8,6 +8,18 @@ Board::Board() {
             board[i][j] = 0;
         }
     }
+    int no = 0;
+    no = rand()%75;
+    for(int i=0;i<no;++i){
+        for(int row=rand();row>0;row=rand()){
+            for(int col=rand();col>0;col=rand()){
+                in=rand()%9+1;
+                if(isValid(row,col,board[row][col])){
+                    board[row][col]=in;
+                }
+            }
+        }
+    }
 }
 
 void Board::display() {
