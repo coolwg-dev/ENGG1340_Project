@@ -2,7 +2,7 @@
 #include <iostream>
 
 Board::Board() {
-    srand(static_cast<unsigned_int>(time(0)));
+    srand(static_cast<unsigned int>(time(0)));
     // Initialize the board with zeros
     for (int i = 0; i < 9; ++i) {
         for (int j = 0; j < 9; ++j) {
