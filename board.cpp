@@ -9,9 +9,9 @@ Board::Board() {
         }
     }
     int no = 0;
-    no = rand()%75;
+    no = srand(time(0))%75;
     for(int i=0;i<no;++i){
-        for(int row=rand()%9;row>0;row=rand()%9){
+        for(int row=srand(time(0))%9;row>0;row=srand(time(0))%9){
             for(int col=rand()%9;col>0;col=rand()%9){
                 int in=rand()%9+1;
                 if(isValid(row,col,in)){
