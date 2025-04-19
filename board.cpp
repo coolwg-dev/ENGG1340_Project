@@ -29,6 +29,7 @@ bool Board::isGameWon(){
             }
         }
     }
+    return true;
 }
 bool Board::setCell(int row, int col, int num) {
     if (isValid(row, col, num)) {
