@@ -3,6 +3,11 @@
 
 Board::Board() {
     srand(static_cast<unsigned int>(time(0)));
+    for (int i = 0; i < 9; ++i) {
+        for (int j = 0; j < 9; ++j) {
+            board[i][j] = 0;
+        }
+    }
     for(int row=0;row<9;++row){
         for(int col=0;col<9;++col){
             while(board[row][col]==0){
@@ -14,12 +19,10 @@ Board::Board() {
         }
     }
     // Initialize the board with zeros
-    int no = 0;
-    no = rand()%75;
-    for (int i = 0; i < 9; ++i) {
-        for (int j = 0; j < 9; ++j) {
-            board[i][j] = 0;
-        }
+    for(int a = rand()%15;a>0;--a){
+        int i=rand()%9;
+        int j=rand()%9;
+        board[i][j] = 0;
     }
 }
 
