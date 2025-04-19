@@ -5,7 +5,7 @@ CXX = g++
 CXXFLAGS = -Wall -Wextra -std=c++11
 
 # Source files
-SRCS = main.cpp board.cpp sudoku_game.cpp
+SRCS = main.cpp board.cpp sudoku.cpp
 
 # Object files
 OBJS = $(SRCS:.cpp=.o)
